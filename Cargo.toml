@@ -3,10 +3,15 @@ name = "rust-gpu-builder"
 version = "0.5.0"
 edition = "2021"
 
+[features]
+default = ["use-compiled-tools"]
+use-installed-tools = ["spirv-builder/use-installed-tools"]
+use-compiled-tools = ["spirv-builder/use-compiled-tools"]
+
 [dependencies]
 rust-gpu-builder-shared = { git = "https://github.com/bevy-rust-gpu/rust-gpu-builder-shared" }
 
-spirv-builder = "0.8.0"
+spirv-builder = { git = "https://github.com/EmbarkStudios/rust-gpu", rev = "54f6978", default-features = false }
 notify = "5.1.0"
 serde_json = "1.0.94"
 rmp-serde = "1.1.1"
