@@ -1,6 +1,6 @@
 [toolchain]
-channel = "nightly-2023-03-04"
-components = ["rust-src", "rustc-dev", "llvm-tools-preview"]
+channel = "nightly-2023-09-30"
+components = ["rust-src", "rustc-dev", "llvm-tools"]
 # commit_hash = 44cfafe2fafe816395d3acc434663a45d5178c41
 
 # Whenever changing the nightly channel, update the commit hash above, and make
